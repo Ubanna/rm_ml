@@ -1,0 +1,64 @@
+.scrolDown {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60px;
+}
+
+.scrolDown:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #002e5d;
+  border-bottom: 2px solid #002e5d;
+  transform: rotate(-45deg);
+}
+
+.scrolDown:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 2px;
+  height: 60px;
+  background: #002e5d;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  45% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+  55% {
+    transform-origin: bottom;
+    transform: scaleY(1);
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+}
+
+.scrolDown p {
+  position: absolute;
+  font-size: 10px;
+  margin-left: 0.4rem;
+  margin-top: 2px;
+  /* width: 120px; */
+  /* transform: translate(-50%, 50px); */
+  text-transform: uppercase;
+  color: #002e5d;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  /* background-color: tomato; */
+  line-height: 1;
+}

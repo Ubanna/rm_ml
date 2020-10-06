@@ -1,0 +1,71 @@
+:root {
+  --primary: #fff;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  color: #242424;
+  border: 1px solid var(--primary);
+}
+
+.btn--outlines {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-bottom: 120px;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #002e5d;
+  padding: 8px 20px;
+  border: 1px solid #002e5d;
+  transition: all 0.3s ease-out;
+  margin-bottom: 150px;
+  margin-top: 150px;
+}
+
+.btn--medium {
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
+.btn--large {
+  padding: 12px 26px;
+  font-size: 20px;
+}
+
+.btn--large:hover,
+.btn--medium:hover {
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: #242424;
+  transition: 250ms;
+}
+
+@media screen and (max-width: 960px) {
+  .btn--outline {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn--outlines {
+    margin-bottom: 50px;
+  }
+}
