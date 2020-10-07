@@ -51,7 +51,10 @@
 .scrolDown p {
   position: absolute;
   font-size: 10px;
-  margin-left: 0.4rem;
+  margin-left: 0.8rem;
+  -webkit-margin-left: 1.2rem;
+  -webkit-margin-before: 1.2rem;
+  -webkit-margin-start: 1.2rem;
   margin-top: 2px;
   /* width: 120px; */
   /* transform: translate(-50%, 50px); */
