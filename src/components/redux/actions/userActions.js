@@ -3,13 +3,13 @@ import {
   MATCH_TYPES,
   PREDICT_PRICE,
   LOADING_USER,
+  CLEAR_LOADING,
 } from "../types";
 import axios from "axios";
 
 export const getLocations = () => (dispatch) => {
-  //   dispatch({ type: GET_LOCATIONS });
   axios
-    .get("/get_location_names")
+    .get("/api/get_location_names")
     .then((res) => {
       dispatch({
         type: GET_LOCATIONS,
@@ -25,10 +25,8 @@ export const getLocations = () => (dispatch) => {
 };
 
 export const matchHouseTypes = (formData) => (dispatch) => {
-  // dispatch({ type: LOADING_UI });
-
   axios
-    .post("/match_home_types", formData, {
+    .post("/api/match_home_types", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -46,10 +44,9 @@ export const matchHouseTypes = (formData) => (dispatch) => {
 };
 
 export const predictHomePrice = (formData) => (dispatch) => {
-  // dispatch({ type: LOADING_UI });
-
+  dispatch({ type: LOADING_USER });
   axios
-    .post("/predict_home_price", formData, {
+    .post("/api/predict_home_price", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -60,6 +57,7 @@ export const predictHomePrice = (formData) => (dispatch) => {
         payload: res.data.estimated_price,
         obj: Object.fromEntries(formData),
       });
+      // dispatch({ type: CLEAR_LOADING });
     })
     .catch((error) => {
       console.log(error);

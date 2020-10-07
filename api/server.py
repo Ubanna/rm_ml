@@ -1,12 +1,15 @@
 from flask import Flask, request, jsonify
 import util
-from gevent.pywsgi import WSGIServer
 
-app = Flask(__name__)
-CORS(app)
+app = Flask(__name__, static_folder="../build", static_url_path='/')
 
 
-@app.route('/get_location_names')
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+
+
+@app.route('/api/get_location_names')
 def get_location_names():
     response = jsonify({
         'locations': util.get_location_names()
@@ -16,7 +19,7 @@ def get_location_names():
     return response
 
 
-@app.route('/match_home_types', methods=['GET', 'POST'])
+@app.route('/api/match_home_types', methods=['GET', 'POST'])
 def match_home_types():
     area = request.form['area']
 
@@ -29,7 +32,7 @@ def match_home_types():
     return response
 
 
-@app.route('/predict_home_price', methods=['GET', 'POST'])
+@app.route('/api/predict_home_price', methods=['GET', 'POST'])
 def predict_home_price():
     area = request.form['area']
     types = request.form['types']

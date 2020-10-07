@@ -16,13 +16,13 @@
 }
 
 .h11 {
-  font-size: 2rem;
+  font-size: 1.9rem;
   margin: 0 0 0.75rem 0;
   color: #002e5d;
 }
 
 .beds {
-  width: 50%;
+  width: 250px;
   margin: 0 auto;
 }
 
@@ -107,14 +107,14 @@
   }
 
   .beds {
-    width: 30%;
+    width: 200px;
     margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 768px) {
   .beds {
-    width: 40%;
+    /* width: 40%; */
     margin: 0 auto;
   }
   .cardcontainer {
@@ -134,7 +134,7 @@
   }
 
   .beds {
-    width: 70%;
+    width: 170px;
     margin: 0 auto;
   }
 }
@@ -159,7 +159,7 @@
     background: #fff;
   }
   .beds {
-    width: 90%;
+    /* width: 90%; */
     margin: 0 auto;
   }
 

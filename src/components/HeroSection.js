@@ -5,6 +5,7 @@ import "../styles/HeroSection.css";
 import { connect } from "react-redux";
 import SelectBox from "./SelectBox";
 import { matchHouseTypes } from "./redux/actions/userActions";
+import Loading from "./Loading";
 
 class HeroSection extends React.Component {
   constructor(props) {

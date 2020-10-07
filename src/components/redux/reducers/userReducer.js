@@ -3,10 +3,11 @@ import {
   MATCH_TYPES,
   PREDICT_PRICE,
   LOADING_USER,
+  CLEAR_LOADING,
 } from "../types";
 
 const initialState = {
-  loading: false,
+  loading: null,
   location: "",
   currentHomeDetails: {},
   homeTypes: [],
@@ -21,7 +22,7 @@ export default function (state = initialState, action) {
     case MATCH_TYPES:
       return {
         ...state,
-        loading: false,
+        loading: null,
         hide_params: false,
         hide_details: true,
         homeTypes: action.payload,
@@ -32,13 +33,13 @@ export default function (state = initialState, action) {
     case GET_LOCATIONS:
       return {
         ...state,
-        loading: false,
+        loading: null,
         locations: action.payload,
       };
     case PREDICT_PRICE:
       return {
         ...state,
-        loading: false,
+        loading: null,
         hide_details: false,
         estimatedPrice: action.payload,
         currentHomeDetails: action.obj,
@@ -47,6 +48,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
         loading: true,
+      };
+    case CLEAR_LOADING:
+      return {
+        ...state,
+        loading: null,
       };
     default:
       return state;
