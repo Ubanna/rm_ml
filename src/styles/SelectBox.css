@@ -67,6 +67,14 @@ h2 {
   overflow-y: scroll;
 }
 
+@media only screen and (hover: none) and (pointer: coarse) {
+  .select-box .options-container.active {
+    max-height: 125px;
+    opacity: 1;
+    overflow-y: scroll;
+  }
+}
+
 .select-box .options-container.active + .selected::after {
   transform: rotateX(180deg);
   top: -6px;
