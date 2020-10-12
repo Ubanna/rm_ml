@@ -24,12 +24,12 @@ You will also see any lint errors in the console.
 
 ### For server - Python/Flask
 
-### cd api
+### `cd api`
 
-### python3 -m venv venv
+### `python3 -m venv venv`
 
-### . venv/bin/activate
+### `. venv/bin/activate`
 
-### pip3 install -r requirements.txt
+### `pip3 install -r requirements.txt`
 
 ### `npm start-api or yarn start api`
