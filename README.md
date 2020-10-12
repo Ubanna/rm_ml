@@ -1,6 +1,8 @@
 ## PREDICTING PROPERTY PRICES IN LAGOS STATE - WEB APPLICATION USING REACT, FLASK AND AWS
 
-This website is powered by my machine learning model for predicting properties in lagos state [machine learning model](https://github.com/Ubanna/lagos_properties_ml)
+This website is powered by my machine learning model for predicting property prices in lagos state [machine learning model](https://github.com/Ubanna/lagos_properties_ml)
+
+Link to the website - http://ec2-18-191-248-7.us-east-2.compute.amazonaws.com
 
 ### For front-end - React
 
